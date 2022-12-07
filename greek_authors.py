@@ -1,3 +1,4 @@
+import time
 import tkinter as tk
 import webbrowser
 
@@ -64,6 +65,19 @@ tlg_urls = ['http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0012
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0011&wid=&q=SOPHOCLES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0006&wid=&q=EURIPIDES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid='
 ]
+more_urls = [['http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS-ILIADA/ARXAIO/ILIADA.htm', 'http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS%20ODYSSEIA/OMHROS%20ODYSSEIA.htm'],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             []
+]
 
 def get_search():
     author = search_textbox.get()
@@ -71,6 +85,9 @@ def get_search():
         if make_clear(author) in authors[i]:
             webbrowser.open(greek_language_urls[i])
             webbrowser.open(perseus_urls[i])
+            for mu in more_urls[i]:
+                webbrowser.open(mu)
+            time.sleep(1)
             if run_tlg.get() == 1:
                 webbrowser.open(tlg_urls[i])
 
