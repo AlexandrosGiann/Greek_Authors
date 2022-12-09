@@ -4,7 +4,12 @@ import webbrowser
 
 wn = tk.Tk()
 wn.title('Greek Authors by Alexandros Giannakis') # Πρόγραμμα από τον Αλέξανδρο Γιαννάκη
-wn.geometry("500x200")
+wn.geometry("520x250")
+wn.configure(bg='dark orange')
+bg = tk.PhotoImage(file = "greek_authors_img.png")
+canvas = tk.Canvas(wn, width = 500, height = 200, bg='dark orange', highlightthickness=0)      
+canvas.grid(row=2, column=0, columnspan=4)           
+canvas.create_image(20,20, anchor=tk.NW, image=bg)
 search_textbox = tk.Entry(wn, width=50)
 search_textbox.grid(row=0, column=1, sticky=tk.W+tk.E)
 run_tlg = tk.IntVar()
@@ -93,6 +98,6 @@ def get_search():
 
 search_button = tk.Button(wn, text="Αναζήτηση", command=get_search)
 search_button.grid(row=0, column=2, sticky=tk.W+tk.E)
-tlg_checkbox = tk.Checkbutton(wn, text='TLG',variable=run_tlg, onvalue=1, offvalue=0)
+tlg_checkbox = tk.Checkbutton(wn, bg='dark orange', text='TLG',variable=run_tlg, onvalue=1, offvalue=0)
 tlg_checkbox.grid(row=1, column=0)
 wn.mainloop()
