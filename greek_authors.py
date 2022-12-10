@@ -30,7 +30,7 @@ def make_clear(word):
     word = word.replace('Ϋ', 'Υ')
     return word
 
-authors = [['ΟΜΗΡΟΣ'], ['ΗΣΙΟΔΟΣ'], ['ΗΡΟΔΟΤΟΣ'], ['ΘΟΥΚΥΔΙΔΗΣ'], ['ΞΕΝΟΦΩΝ', 'ΞΕΝΟΦΩΝΤΑΣ'], ['ΠΛΑΤΩΝ', 'ΠΛΑΤΩΝΑΣ'], ['ΑΡΙΣΤΟΤΕΛΗΣ'], ['ΛΥΣΙΑΣ'], ['ΔΗΜΟΣΘΕΝΗΣ'], ['ΑΙΣΧΥΛΟΣ'], ['ΣΟΦΟΚΛΗΣ'], ['ΕΥΡΙΠΙΔΗΣ'], ['ΑΙΣΧΙΝΗΣ'], ['ΑΡΙΣΤΟΦΑΝΗΣ'], ['ΑΡΡΙΑΝΟΣ'], ['ΒΑΚΧΥΛΙΔΗΣ'], ['ΒΙΩΝ'], ['ΓΟΡΓΙΑΣ']]
+authors = [['ΟΜΗΡΟΣ'], ['ΗΣΙΟΔΟΣ'], ['ΗΡΟΔΟΤΟΣ'], ['ΘΟΥΚΥΔΙΔΗΣ'], ['ΞΕΝΟΦΩΝ', 'ΞΕΝΟΦΩΝΤΑΣ'], ['ΠΛΑΤΩΝ', 'ΠΛΑΤΩΝΑΣ'], ['ΑΡΙΣΤΟΤΕΛΗΣ'], ['ΛΥΣΙΑΣ'], ['ΔΗΜΟΣΘΕΝΗΣ'], ['ΑΙΣΧΥΛΟΣ'], ['ΣΟΦΟΚΛΗΣ'], ['ΕΥΡΙΠΙΔΗΣ'], ['ΑΙΣΧΙΝΗΣ'], ['ΑΡΙΣΤΟΦΑΝΗΣ'], ['ΑΡΡΙΑΝΟΣ'], ['ΒΑΚΧΥΛΙΔΗΣ'], ['ΒΙΩΝ'], ['ΓΟΡΓΙΑΣ'], ['ΘΕΟΚΡΙΤΟΣ'], ['ΘΕΟΦΡΑΣΤΟΣ'], ['ΙΣΟΚΡΑΤΗΣ'], ['ΠΛΟΥΤΑΡΧΟΣ'], ['ΠΙΝΔΑΡΟΣ'], ['ΜΟΣΧΟΣ'], ['ΚΑΛΛΙΜΑΧΟΣ'], ['ΛΟΥΚΙΑΝΟΣ'], ['ΑΝΤΙΦΩΝ', 'ΑΝΤΙΦΩΝ ΡΗΤΩΡ'], ['ΛΟΓΓΟΣ']]
 greek_language_urls = ['https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=194',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=156',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=153',
@@ -48,7 +48,17 @@ greek_language_urls = ['https://www.greek-language.gr/digitalResources/ancient_g
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=124',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=127',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=129',
-                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=130'
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=130',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=158',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=159',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=166',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=201',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=198',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=187',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=169',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=177',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=116',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=175'
 ]
 perseus_urls = ['http://www.perseus.tufts.edu/hopper/searchresults?q=Homer',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Hesiod',
@@ -67,7 +77,17 @@ perseus_urls = ['http://www.perseus.tufts.edu/hopper/searchresults?q=Homer',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Arrian',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Bacchylides',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Bion',
-                'http://www.perseus.tufts.edu/hopper/searchresults?q=Gorgias'
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Gorgias',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Theocritus',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Theophrastus',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Isocrates',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Plutarch',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Pindar',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Moschus',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Callimachus',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Lucian',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Antiphon',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Longus'
 ]
 tlg_urls = ['http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0012&wid=&q=HOMERUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0020&wid=&q=HESIODUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
@@ -86,9 +106,29 @@ tlg_urls = ['http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0012
             'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=&wid=&q=Flavius%20ARRIANUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=3&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0199&wid=&q=BACCHYLIDES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0036&wid=&q=BION&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=4&acp=1&editid=',
-            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0593&wid=&q=GORGIAS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=5&acp=1&editid='
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0593&wid=&q=GORGIAS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=5&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0005&wid=&q=THEOCRITUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=3&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0093&wid=&q=THEOPHRASTUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=4&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0010&wid=&q=ISOCRATES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=5&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0007&wid=&q=PLUTARCHUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0033&wid=&q=PINDARUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0035&wid=&q=MOSCHUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0533&wid=&q=CALLIMACHUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0062&wid=&q=LUCIANUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0028&wid=&q=ANTIPHON&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0561&wid=&q=LONGUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid='
 ]
 more_urls = [['http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS-ILIADA/ARXAIO/ILIADA.htm', 'http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS%20ODYSSEIA/OMHROS%20ODYSSEIA.htm'],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
              [],
              [],
              [],
