@@ -30,7 +30,7 @@ def make_clear(word):
     word = word.replace('Ϋ', 'Υ')
     return word
 
-authors = [['ΟΜΗΡΟΣ'], ['ΗΣΙΟΔΟΣ'], ['ΗΡΟΔΟΤΟΣ'], ['ΘΟΥΚΥΔΙΔΗΣ'], ['ΞΕΝΟΦΩΝ', 'ΞΕΝΟΦΩΝΤΑΣ'], ['ΠΛΑΤΩΝ', 'ΠΛΑΤΩΝΑΣ'], ['ΑΡΙΣΤΟΤΕΛΗΣ'], ['ΛΥΣΙΑΣ'], ['ΔΗΜΟΣΘΕΝΗΣ'], ['ΑΙΣΧΥΛΟΣ'], ['ΣΟΦΟΚΛΗΣ'], ['ΕΥΡΙΠΙΔΗΣ']]
+authors = [['ΟΜΗΡΟΣ'], ['ΗΣΙΟΔΟΣ'], ['ΗΡΟΔΟΤΟΣ'], ['ΘΟΥΚΥΔΙΔΗΣ'], ['ΞΕΝΟΦΩΝ', 'ΞΕΝΟΦΩΝΤΑΣ'], ['ΠΛΑΤΩΝ', 'ΠΛΑΤΩΝΑΣ'], ['ΑΡΙΣΤΟΤΕΛΗΣ'], ['ΛΥΣΙΑΣ'], ['ΔΗΜΟΣΘΕΝΗΣ'], ['ΑΙΣΧΥΛΟΣ'], ['ΣΟΦΟΚΛΗΣ'], ['ΕΥΡΙΠΙΔΗΣ'], ['ΑΙΣΧΙΝΗΣ'], ['ΑΡΙΣΤΟΦΑΝΗΣ'], ['ΑΡΡΙΑΝΟΣ'], ['ΒΑΚΧΥΛΙΔΗΣ'], ['ΒΙΩΝ'], ['ΓΟΡΓΙΑΣ']]
 greek_language_urls = ['https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=194',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=156',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=153',
@@ -42,7 +42,13 @@ greek_language_urls = ['https://www.greek-language.gr/digitalResources/ancient_g
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=133',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=102',
                        'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=214',
-                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=150'
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=150',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=101',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=123',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=124',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=127',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=129',
+                       'https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=130'
 ]
 perseus_urls = ['http://www.perseus.tufts.edu/hopper/searchresults?q=Homer',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Hesiod',
@@ -55,7 +61,13 @@ perseus_urls = ['http://www.perseus.tufts.edu/hopper/searchresults?q=Homer',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Demosthenes',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Aeschylus',
                 'http://www.perseus.tufts.edu/hopper/searchresults?q=Sophocles',
-                'http://www.perseus.tufts.edu/hopper/searchresults?q=Euripides'
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Euripides',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Aeschines',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Aristophanes',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Arrian',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Bacchylides',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Bion',
+                'http://www.perseus.tufts.edu/hopper/searchresults?q=Gorgias'
 ]
 tlg_urls = ['http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0012&wid=&q=HOMERUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0020&wid=&q=HESIODUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
@@ -68,9 +80,21 @@ tlg_urls = ['http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0012
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0014&wid=&q=DEMOSTHENES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0085&wid=&q=AESCHYLUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=3&acp=1&editid=',
             'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0011&wid=&q=SOPHOCLES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
-            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0006&wid=&q=EURIPIDES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid='
+            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=0006&wid=&q=EURIPIDES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0026&wid=&q=AESCHINES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/demo/csearch.jsp#doc=tlg&aid=&wid=&q=ARISTOPHANES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=&wid=&q=Flavius%20ARRIANUS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=3&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0199&wid=&q=BACCHYLIDES&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=2&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0036&wid=&q=BION&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=4&acp=1&editid=',
+            'http://stephanus.tlg.uci.edu/Iris/canon/csearch.jsp#doc=tlg&aid=0593&wid=&q=GORGIAS&dt=list&cs_sort=1_sortname_asc&st=author_text&aw=&verndipl=0&per=50&c=5&acp=1&editid='
 ]
 more_urls = [['http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS-ILIADA/ARXAIO/ILIADA.htm', 'http://users.sch.gr/ipap/Ellinikos%20Politismos/Yliko/OMHROS%20ODYSSEIA/OMHROS%20ODYSSEIA.htm'],
+             [],
+             [],
+             [],
+             [],
+             [],
+             [],
              [],
              [],
              [],
